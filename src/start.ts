@@ -1,34 +1,10 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
 import app from "./server"
 import debug from "debug"
 import http from "http"
 
-/**
- * Get port from environment and store in Express.
- */
-
-
-
-/**
- * Create HTTP server.
- */
-
 const server = http.createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-
-
-/**
- * Normalize a port into a number, string, or false.
- */
 
 const normalizePort = (value: string) => {
   const port = parseInt(value, 10);
@@ -45,10 +21,6 @@ const normalizePort = (value: string) => {
 
   return false;
 }
-
-/**
- * Event listener for HTTP server "error" event.
- */
 
 const onError = (error: any) => {
   console.log(error)
@@ -73,12 +45,8 @@ const onError = (error: any) => {
   }
 }
 
-/**
- * Event listener for HTTP server "listening" event.
- */
-
 const onListening = () => {
-  const addr:any = server.address();
+  const addr: any = server.address();
   const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
   debug("Listening on " + bind);
 }
