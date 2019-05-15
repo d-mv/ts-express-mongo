@@ -10,7 +10,7 @@
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "types": ["node"],"allowJs": true,
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -19,8 +19,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "typeRoots": ["node_modules/@types"],
-    "lib": ["es2015","dom", "dom.iterable", "esnext"]
+    "lib": ["es2015", "dom", "dom.iterable", "esnext"],
+    "types": ["jest", "node"]
   },
   "include": ["./src/**/*.ts"],
-  "exclude": ["./src/public/"]
+  "exclude": ["./src/public/", "node_modules"]
 }
